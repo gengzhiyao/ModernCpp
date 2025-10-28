@@ -4,6 +4,7 @@
 
 int main ()
 {
+    //SetConsoleOutputCP (CP_UTF8);
     // int* i = new int (10);
     // std::shared_ptr<int> pi = std::make_shared<int> (11);
     // std::shared_ptr<A> a1 = std::make_shared<A> ("std::string");
@@ -31,5 +32,14 @@ int main ()
     //std::shared_ptr<A> invalidA = new A ("..");
     std::shared_ptr<A> validA (new A ("validA"));
     //std::move (moveA2);
+
+    std::auto_ptr<C> autoPtrC1 (new C);
+    std::auto_ptr<C> autoPtrC2 (autoPtrC1);
+    if (autoPtrC1.get () == NULL)
+    {
+        //对于UTF8编码的文件，若终端中显示的字体是乱码，那么在windows的时间设置中，将编码方式转换为Unicode编码
+        std::cout << std::string ("autoptr是空指针。") << std::endl;
+    }
+
     return 0;
 }

@@ -2,6 +2,7 @@
 	"configurations" : 
 	[
 		{
+			"abstractTargets" : [],
 			"directories" : 
 			[
 				{
@@ -10,7 +11,7 @@
 					[
 						1
 					],
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f6f22219c74102c3da70.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
@@ -20,7 +21,7 @@
 				},
 				{
 					"build" : "src",
-					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"jsonFile" : "directory-src-Debug-1722085f943e0250936a.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
@@ -55,7 +56,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "void::@145eef247bfb46b6828c",
-					"jsonFile" : "target-void-Debug-43cedf07b6839d3c3d9b.json",
+					"jsonFile" : "target-void-Debug-8f08e37a060967f0e4a9.json",
 					"name" : "void",
 					"projectIndex" : 0
 				}
@@ -65,12 +66,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Data/CPPLearn/ModernCpp/build",
-		"source" : "D:/Data/CPPLearn/ModernCpp"
+		"build" : "E:/Data/ModernCpp/build",
+		"source" : "E:/Data/ModernCpp"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 8
+		"minor" : 9
 	}
 }

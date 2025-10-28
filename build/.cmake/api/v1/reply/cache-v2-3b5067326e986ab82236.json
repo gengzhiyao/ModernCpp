@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Data/CPPLearn/ModernCpp/build"
+			"value" : "e:/Data/ModernCpp/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "2"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -587,7 +587,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Data/CPPLearn/ModernCpp/build/CMakeFiles/pkgRedirects"
+			"value" : "E:/Data/ModernCpp/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Data/CPPLearn/ModernCpp"
+			"value" : "E:/Data/ModernCpp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -918,55 +918,7 @@
 			"value" : "ModernCpp"
 		},
 		{
-			"name" : "CMAKE_PROJECT_VERSION",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_MAJOR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_MINOR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_PATCH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_PROJECT_VERSION_TWEAK",
+			"name" : "CMAKE_PROJECT_SPDX_LICENSE",
 			"properties" : 
 			[
 				{
@@ -1127,7 +1079,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/CMake/share/cmake-4.1"
+			"value" : "C:/Program Files/CMake/share/cmake-4.2"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1379,7 +1331,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Data/CPPLearn/ModernCpp/build"
+			"value" : "E:/Data/ModernCpp/build"
 		},
 		{
 			"name" : "ModernCpp_IS_TOP_LEVEL",
@@ -1403,7 +1355,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Data/CPPLearn/ModernCpp"
+			"value" : "E:/Data/ModernCpp"
 		}
 	],
 	"kind" : "cache",
