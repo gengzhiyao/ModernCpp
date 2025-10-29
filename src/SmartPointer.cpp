@@ -1,6 +1,10 @@
 #include <iostream>
 #include <memory>
+#include <functional>
 #include "SmartPointer.h"
+
+void myCustomDel (A *a);
+void DecltypeCustom (A *a);
 
 int main ()
 {
@@ -11,7 +15,7 @@ int main ()
     // std::shared_ptr<A> a2 (new A ("arguments"));
     // a2 = a1;
     // A* a3 = a2.get ();
-    // //delete a3; 不要手动删除指针指针返回的裸指针，否则会报异常
+    //!delete a3; 不要手动删除指针指针返回的裸指针，否则会报异常
     // std::weak_ptr<A> weak (a2);
 
     //在循环引用中，每个对象的引用计数依赖于另一个对象的释放，而另一个对象的释放又依赖于当前对象的释放，形成一个无法打破的闭环。
@@ -40,6 +44,28 @@ int main ()
         //对于UTF8编码的文件，若终端中显示的字体是乱码，那么在windows的时间设置中，将编码方式转换为Unicode编码
         std::cout << std::string ("autoptr是空指针。") << std::endl;
     }
+    C *c = autoPtrC2.release ();
+    if (autoPtrC2.get()==nullptr)
+    {
+        std::cout << "autoPtrC2为空" << std::endl;
+    }
+
+    std::unique_ptr<A> uniqueA1 (new A ("use unique pointer"));
+
+    std::unique_ptr<A , decltype(myCustomDel) *> (new A ("custom deleter object") , DecltypeCustom);
+    decltype((myCustomDel)) fun = DecltypeCustom;//函数引用，一旦绑定就不可更改
 
     return 0;
+}
+
+void myCustomDel (A* a)
+{
+    std::cout << "执行自定义删除器" << std::endl;
+    delete a;
+}
+
+void DecltypeCustom (A *a)
+{
+    std::cout << "执行自定义删除器:DecltypeCustom" << std::endl;
+    delete a;
 }

@@ -18,7 +18,7 @@ public:
     }
 
 public:
-    std::shared_ptr<B> m_b;
+    std::shared_ptr<B> m_b; 
     //std::weak_ptr<B> m_b;
 };
 
