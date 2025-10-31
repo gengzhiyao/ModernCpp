@@ -40,7 +40,7 @@ int main ()
     //std::move (moveA2);
     std::cout << validA << std::endl;
 
-    std::auto_ptr<C> autoPtrC1 (new C);
+    std::auto_ptr<C> autoPtrC1 (new C); //auto_ptr在VS2017中被移除，但在GCC中，目前还仍被保留
     std::auto_ptr<C> autoPtrC2 (autoPtrC1);
     if (autoPtrC1.get () == NULL)
     {

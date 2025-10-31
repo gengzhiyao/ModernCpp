@@ -1,7 +1,7 @@
 
 
 add_executable(void 
-                    SmartPointer.cpp
+                    allocator.cpp
                     )
 
 target_include_directories(void PRIVATE ../include)
