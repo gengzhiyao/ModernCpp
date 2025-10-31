@@ -10,6 +10,27 @@ void MemMgr::MemAlloc ()
     std::cout << pInt3 << std::endl;
 }
 
+
+struct Const
+{
+    Const (char* nstring)
+        :CString (nstring)
+    {
+    }
+    char& CanChangeString () const
+    {
+        return CString[0];
+    }
+
+    char* GetString () const
+    {
+        return CString;
+    }
+
+private:
+    char* CString;
+};
+
 int main ()
 {
     MemMgr mgr;
@@ -17,4 +38,22 @@ int main ()
 
     MyAllocator<MemMgr> myalloc;
     myalloc.allocate (2);
+
+    //char *ch = "Hello"; //C++11中不合法
+    const char* hello = "Hello";
+
+    Const constChar("String");
+    // char ch = constChar.CanChangeString ();
+    // ch = 'T';
+    // char& pch = constChar.CanChangeString ();
+    // pch = 'A';
+    // char* pc = &constChar.CanChangeString ();
+    // *pc = 'E';
+    // std::cout << constChar.GetString () << std::endl;
+
+    char arrch [] = "World";
+    Const conch (arrch);
+    char* tmp = &conch.CanChangeString ();
+    *tmp = 'M';
+    std::cout << conch.GetString () << std::endl;
 }
