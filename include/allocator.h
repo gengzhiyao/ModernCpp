@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <iostream>
 
+class A;
+class B;
+
 class MemMgr {
 public:
-    MemMgr () = default;
+    MemMgr () :a(new A){}
     MemMgr (const char* nmessage)
         :message (nmessage)
     {
@@ -12,8 +15,40 @@ public:
     }
     void MemAlloc ();
 
+    const A* operator->() const
+    {
+        return a;
+    }
+
 private:
     const char* message;
+    A* a;
+};
+
+class A
+{
+public:
+    A():b(new B){}
+    void fun () const
+    {
+
+    }
+    const B* operator->() const
+    {
+        return b;
+    }
+private:
+    B* b;
+};
+
+class B
+{
+public:
+    void funB () const
+    {
+
+    }
+    std::string str;
 };
 
 template <typename T>

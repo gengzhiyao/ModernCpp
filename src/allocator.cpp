@@ -35,6 +35,8 @@ int main ()
 {
     MemMgr mgr;
     mgr.MemAlloc ();
+    mgr.operator->()->operator->()->funB ();    //链式调用??
+    //mgr->funB (); //这行代码编译不通过
 
     MyAllocator<MemMgr> myalloc;
     myalloc.allocate (2);
