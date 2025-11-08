@@ -25,7 +25,7 @@ int main ()
     WithFooClass fooClass;
     call_foo (fooClass);
 
-    TypePrinter<WithValueType,std::true_type>::print ();
-    
+    TypePrinter<WithValueType , std::true_type>::print ();
+
     return 0;
 }

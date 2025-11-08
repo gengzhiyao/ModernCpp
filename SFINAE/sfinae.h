@@ -40,7 +40,7 @@ namespace Analysis
     {
 
     }
-
+    
     template<typename T>
     struct is_less_than_pointer
     {
