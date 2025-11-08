@@ -31,7 +31,7 @@ private:
     char* CString;
 };
 
-int main ()
+int main1 ()
 {
     MemMgr mgr;
     mgr.MemAlloc ();
@@ -58,4 +58,6 @@ int main ()
     char* tmp = &conch.CanChangeString ();
     *tmp = 'M';
     std::cout << conch.GetString () << std::endl;
+    return 0;
 }
+

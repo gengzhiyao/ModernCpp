@@ -2,8 +2,32 @@
 #include <stdlib.h>
 #include <iostream>
 
-class A;
-class B;
+class B
+{
+public:
+    void funB () const
+    {
+
+    }
+    std::string str;
+};
+class A
+{
+public:
+    A () :b (new B) { }
+    void fun () const
+    {
+
+    }
+    const B* operator->() const
+    {
+        return b;
+    }
+private:
+    B* b;
+};
+
+
 
 class MemMgr {
 public:
@@ -25,31 +49,7 @@ private:
     A* a;
 };
 
-class A
-{
-public:
-    A():b(new B){}
-    void fun () const
-    {
 
-    }
-    const B* operator->() const
-    {
-        return b;
-    }
-private:
-    B* b;
-};
-
-class B
-{
-public:
-    void funB () const
-    {
-
-    }
-    std::string str;
-};
 
 template <typename T>
 class MyAllocator {

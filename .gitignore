@@ -12,6 +12,8 @@ _deps
 CMakeUserPresets.json
 .vscode
 /build/
+.idea
+/cmake-build-debug/
 
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
