@@ -26,13 +26,13 @@ namespace Analysis
     template<typename T>
     struct enable_if<true,T>
     {
-        using type = T;
+        using type = T; //在类（包括类模板）内部，using 别名 = 类型 是 嵌套类型别名声明，作用是：给某个类型起一个 属于当前类的别名，这个别名的归属是类本身，而非类的实例（对象）。
     };
 
     template<typename T>
-    void someFun (typename enable_if<(sizeof(T)<=sizeof(void*)),T>::type t)
+    void someFun (typename enable_if<(sizeof (T) <= sizeof (void*)) , T>::type t)
     {
-        
+
     }
 
     template<typename T>
