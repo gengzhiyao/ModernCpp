@@ -1,9 +1,10 @@
 #include "sfinae.h"
 #include <memory>
+#include <assert.h>
 
 struct WithValueType
 {
-    using value_type = int;
+    using value_type = int; //嵌套类型别名，属于类而不属于对象
 };
 
 //NOTE - 数组形式的模板实参推断，这样是不对的，C++ 中，固定大小数组的引用 必须明确指定数组的大小，除非用模板参数推导大小
@@ -14,7 +15,7 @@ struct WithValueType
 
 //这种写法才是正确的
 template<typename T , std::size_t N>
-void ArrFunction (const T (&) [N])
+void ArrFunction (const T (&)[N])
 {
 
 }
@@ -22,9 +23,9 @@ void ArrFunction (const T (&) [N])
 int main ()
 {
     int a = 5;
-    print_type(a);
+    print_type (a);
     std::unique_ptr<float> b = std::make_unique<float> (2.4f);
-    float* c = new float(2.4f);
+    float* c = new float (2.4f);
     print_type (c);
     print_type (b.get ());
 
@@ -42,5 +43,13 @@ int main ()
     int arr [] = { 2,2,2,2 };
     ArrFunction (arr);
 
+    //int (&) arrRef[4] = arr;    //ERROR - 错误写法
+    int (&arrRef)[4] = arr;
+
+    //static_assert(std::is_lvalue_reference<arrRef>::value);
+    static_assert(std::is_lvalue_reference<decltype(arrRef)>::value);
+    static_assert(std::is_lvalue_reference_v<decltype((a))>);
+
+    //const float* const& refc = c;
     return 0;
 }
