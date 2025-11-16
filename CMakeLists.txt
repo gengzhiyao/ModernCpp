@@ -16,4 +16,6 @@ add_definitions()
 # add_subdirectory(Item5)
 # add_subdirectory(Logger)
 # add_subdirectory(SFINAE)
-add_subdirectory(Exception)
+# add_subdirectory(Exception)
+add_subdirectory(New)
+
