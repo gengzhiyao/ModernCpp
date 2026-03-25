@@ -18,4 +18,5 @@ add_definitions()
 # add_subdirectory(SFINAE)
 # add_subdirectory(Exception)
 add_subdirectory(New)
+add_subdirectory(IniPaser)
 

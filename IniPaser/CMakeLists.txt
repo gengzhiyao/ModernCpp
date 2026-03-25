@@ -1,0 +1,1 @@
+add_executable(IniPaser main.cpp trim.cpp split_string.cpp)
